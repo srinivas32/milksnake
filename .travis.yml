@@ -8,7 +8,14 @@ matrix:
     - python: 2.7
     - python: pypy
   fast_finish: true
-
+  # added power support arch ppc64le.
+    - python: 3.6
+      arch: ppc64le
+    - python: 2.7
+      arch: ppc64le
+    - python: pypy
+      arch: ppc64le
+  fast_finish: true
 install:
   - pip install pytest
   - curl https://sh.rustup.rs -sSf | sh -s -- -y
